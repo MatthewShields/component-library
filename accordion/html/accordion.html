@@ -1,0 +1,61 @@
+<h2>Accordion Block</h2>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At culpa nulla veritatis beatae ullam quas repellendus praesentium corporis deserunt ab porro alias debitis voluptatum, dignissimos adipisci, dolor laborum minus hic!</p>
+
+<ul class="accordion" data-open-first="true">
+  <li class="accordion__item open">
+    <h3 class="accordion__title">
+      <button
+        aria-expanded="false"
+        class="accordion__trigger"
+        aria-controls="accordion-1-content-0"
+        id="accordion-1-trigger-0"
+      >
+        Title
+        <span class="accordion__handle">
+          <svg viewBox="0 0 20 10"><path d="M0,0 10,10 20,0"></path></svg>
+        </span>
+      </button>
+    </h3>
+    <div
+      id="accordion-1-content-0"
+      role="region"
+      class="accordion__content"
+      aria-labelledby="accordion-1-trigger-0"
+    >
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. At culpa nulla
+        veritatis beatae ullam quas repellendus praesentium corporis deserunt ab
+        porro alias debitis voluptatum, dignissimos adipisci, dolor laborum
+        minus hic!
+      </p>
+    </div>
+  </li>
+  <li class="accordion__item">
+    <h3 class="accordion__title">
+      <button
+        aria-expanded="false"
+        class="accordion__trigger"
+        aria-controls="accordion-1-content-1"
+        id="accordion-1-trigger-1"
+      >
+        another title
+        <span class="accordion__handle">
+          <svg viewBox="0 0 20 10"><path d="M0,0 10,10 20,0"></path></svg>
+        </span>
+      </button>
+    </h3>
+    <div
+      id="accordion-1-content-1"
+      role="region"
+      class="accordion__content"
+      aria-labelledby="accordion-1-trigger-1"
+    >
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. At culpa nulla
+        veritatis beatae ullam quas repellendus praesentium corporis deserunt ab
+        porro alias debitis voluptatum, dignissimos adipisci, dolor laborum
+        minus hic!
+      </p>
+    </div>
+  </li>
+</ul>

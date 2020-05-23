@@ -1,0 +1,83 @@
+$accordion-border-width: 1px !default;
+$border-color: black !default;
+$base-background-color: transparent !default;
+$brand-color: black !default;
+$breakpoint-md: 1000px !default;
+
+// $accordion-border-width: ;
+// $border-color: ;
+// $base-background-color: ;
+// $brand-color: ;
+// $breakpoint-md: ;
+
+.accordion {
+  padding: 0;
+  list-style: none;
+    &__item {
+        border: $accordion-border-width solid $border-color;
+        background-color: $base-background-color;
+        margin-top: 2em;
+    }
+    &__title {
+      margin: 0;
+
+    }
+    &__trigger {
+        color: $brand-color;
+        font-weight: 700;
+        margin: 0;
+        width: 100%;
+        border: 0;
+        padding: 1rem 5rem 1rem 1.5rem;
+        position: relative;
+        background: transparent;
+        font-size: inherit;
+        text-align: left;
+        cursor: pointer;
+    }
+    &__handle {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 3em;
+        background-color: $border-color;
+        border-left: $accordion-border-width solid $border-color;
+        svg {
+            width: 20px;
+            height: 10px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin: -5px -10px;
+            fill: transparent;
+            stroke: #fff;
+            stroke-width: 3;
+            overflow: visible;
+            transform-origin: 50% 50%;
+            transform: rotate(0);
+            transition: 0.3s transform ease;
+        }
+    }
+    &__item.open &__handle svg {
+        transform: rotate(180deg);
+    }
+    &__content {
+        display: none;
+        padding: 1.5rem;
+        border-top: $accordion-border-width solid $border-color;
+        &>*:first-child {
+            margin-top: 0;
+        }
+        &>*:last-child {
+            margin-bottom: 0;
+        }
+    }
+    &__content--active {
+      display: block;
+    }
+}
+
+/* purgecss start ignore */
+
+/* purgecss end ignore */

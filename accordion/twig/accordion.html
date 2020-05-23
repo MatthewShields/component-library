@@ -1,0 +1,30 @@
+<h2>{{ title }}</h2>
+{{ description }}
+
+<ul class="accordion" data-open-first="{{ open_first }}">
+  {% for accordion in accordions %}
+    <li class="accordion__item">
+      <h3 class="accordion__title">
+        <button
+          aria-expanded="false"
+          class="accordion__trigger"
+          aria-controls="accordion-{{ block_id }}-content-{{ loop.index }}"
+          id="accordion-{{ block_id }}-trigger-{{ loop.index }}"
+        >
+          {{ accordion.title }}
+          <span class="accordion__handle">
+            <svg viewBox="0 0 20 10"><path d="M0,0 10,10 20,0"></path></svg>
+          </span>
+        </button>
+      </h3>
+      <div
+        id="accordion-{{ block_id }}-content-{{ loop.index }}"
+        role="region"
+        class="accordion__content"
+        aria-labelledby="accordion-{{ block_id }}-trigger-{{ loop.index }}"
+      >
+        {{ accordion.text }}
+      </div>
+    </li>
+  {% endfor %}
+</ul>
