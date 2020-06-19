@@ -1,0 +1,64 @@
+.tablist {
+
+  &__tabs {
+    @media screen and (min-width: 600px) {
+      display: flex;
+    }
+  }
+
+  &__tab {
+    position: relative;
+    padding: 1rem 1.5rem;
+    border: 1px solid black;
+    overflow: visible;
+    font-family: inherit;
+    font-size: inherit;
+    background-color: #dbdbdb;
+    outline: 0;
+    cursor: pointer;
+    width: 100%;
+    @media screen and (min-width: 600px) {
+      margin: 0 0 -1px 10px;
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+
+    &[aria-selected="true"] {
+      border-bottom: 0;
+      background-color: white;
+    }
+
+    &:before {
+      content: '';
+      height: 2px;
+      left: 0;
+      right: 0;
+      top: 0;
+      position: absolute;
+      background-color: blue;
+      transition: background-color 0.25s ease-in-out, height 0.1s ease-in-out;
+    }
+
+    &[aria-selected="true"]:before,
+    &:hover::before {
+      background-color: orange;
+    }
+
+    &:focus:before {
+      height: 6px;
+      background-color: red;
+    }
+  }
+
+  &__panel {
+    display: none;
+    padding: 1rem 1.5rem;
+    border: 1px solid black;
+
+    &--active {
+      display: block;
+    }
+  }
+}

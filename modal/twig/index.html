@@ -1,0 +1,14 @@
+<button data-modal-id="modal_1">
+  Open modal_1 example
+</button>
+
+{% include '../partials/modal.html' with {
+  'id': 'modal_1',
+  'title': 'Modal Block',
+  'content': '
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At culpa nulla
+      veritatis beatae ullam quas repellendus praesentium corporis deserunt ab
+      porro alias debitis voluptatum, dignissimos adipisci, dolor laborum minus
+      hic!</p>
+  '
+} %}

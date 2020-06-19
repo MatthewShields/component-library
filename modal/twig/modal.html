@@ -1,0 +1,20 @@
+<div
+  role="dialog"
+  id="{{ id }}"
+  aria-labelledby="{{ id }}_title"
+  aria-modal="true"
+  class="modal"
+  data-open-page-load="{{ open_page_load }}"
+>
+  <div class="modal__header">
+    <button class="modal__close" aria-label="Close Modal">
+      <svg fill="none" stroke-width="2" stroke="currentColor" viewBox="0 0 24 24"><path d="M6 18L18 6M6 6l12 12"></path></svg>
+    </button>
+    <h2 id="{{ id }}_title" class="modal__title">
+      {{ title }}
+    </h2>
+  </div>
+  <div class="modal__content">
+    {{ content }}
+  </div>
+</div>

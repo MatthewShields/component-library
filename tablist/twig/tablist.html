@@ -1,0 +1,29 @@
+<div class="tablist">
+  <div role="tablist" aria-label="{{ aria_label }}" class="tablist__tabs">
+    {% for tab in tabs %}
+      <button
+      role="tab"
+      id="tablist{{ block_id }}_tab{{ loop.index }}"
+      aria-selected="false"
+      aria-controls="tablist{{ block_id }}_panel{{ loop.index }}"
+      tabindex="-1"
+      class="tablist__tab"
+      >
+        {{ tab.title }}
+      </button>
+    {% endfor %}
+  </div>
+  <div class="tablist__panels">
+    {% for tab in tabs %}
+    <div
+    tabindex="0"
+    role="tabpanel"
+    id="tablist{{ block_id }}_panel{{ loop.index }}"
+    aria-labelledby="tablist{{ block_id }}_tab{{ loop.index }}"
+    class="tablist__panel tablist__panel--active"
+    >
+      {{ tab.text }}
+    </div>
+    {% endfor %}
+  </div>
+</div>
